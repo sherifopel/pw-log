@@ -2,8 +2,43 @@
 
 Colourful Playwright test logger — structured console output with sections, diffs, tables and pass/fail checks.
 
-<!-- Replace with your own screenshot: run `npx ts-node demo.ts` and screenshot the terminal -->
-![pw-log demo output](./screenshot.png)
+```
+──────────────
+■ Login flow
+──────────────
+🌍 https://example.com/login
+✅ Page loaded
+ User : test@example.com
+
+──────────────
+■ Assertions
+──────────────
+✅ Redirected to dashboard
+✅ Welcome message visible
+❌ Logout button present — element not found after 5s
+
+────────────────
+■ Style parity
+────────────────
+✅ font-size                Expected: 14px → Actual: 14px
+❌ font-weight              Expected: 500 → Actual: 400
+❌ color                    Expected: rgb(0,0,0) → Actual: rgb(51,51,51)
+
+────────────
+■ Summary
+────────────
+
+📊 Results
+┌─────────┬───────────────────────┬───────┐
+│ (index) │ test                  │ pass  │
+├─────────┼───────────────────────┼───────┤
+│ 0       │ 'Login redirects'     │ true  │
+│ 1       │ 'Welcome message'     │ true  │
+│ 2       │ 'Logout button'       │ false │
+│ 3       │ 'Font weight matches' │ false │
+└─────────┴───────────────────────┴───────┘
+⚠️  2 assertions failed — see above
+```
 
 ---
 
