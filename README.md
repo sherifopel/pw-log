@@ -2,12 +2,39 @@
 
 Colourful Playwright test logger — structured console output with sections, diffs, tables and pass/fail checks.
 
+<!-- Replace with your own screenshot: run `npx ts-node demo.ts` and screenshot the terminal -->
+![pw-log demo output](./screenshot.png)
+
+---
+
 ## Install
 
 ```bash
 npm install pw-log
 # or
 pnpm add pw-log
+```
+
+> **Peer dependency:** requires `chalk` v5+, which is installed automatically.
+
+## Quick start
+
+```ts
+// In your Playwright test or page object:
+import { Log } from 'pw-log';
+
+test('login flow', async ({ page }) => {
+  Log.section('Login flow');
+
+  await page.goto('https://example.com/login');
+  Log.navigate('https://example.com/login');
+
+  await page.fill('#email', 'test@example.com');
+  await page.click('button[type=submit]');
+
+  const redirected = page.url().includes('/dashboard');
+  Log.check('Redirected to dashboard', redirected);
+});
 ```
 
 ## Usage
