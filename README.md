@@ -1,6 +1,6 @@
-# pw-log
+# logr-kit
 
-Colourful Playwright test logger — structured console output with sections, diffs, tables and pass/fail checks.
+Structured terminal logger for Node.js — colourful sections, diffs, tables, pass/fail checks and more. Works in Playwright tests, CLI tools, scripts, or anywhere Node.js runs.
 
 ```
 ──────────────
@@ -45,9 +45,9 @@ Colourful Playwright test logger — structured console output with sections, di
 ## Install
 
 ```bash
-npm install pw-log
+npm install logr-kit
 # or
-pnpm add pw-log
+pnpm add logr-kit
 ```
 
 > **Peer dependency:** requires `chalk` v5+, which is installed automatically.
@@ -56,7 +56,7 @@ pnpm add pw-log
 
 ```ts
 // In your Playwright test or page object:
-import { Log } from 'pw-log';
+import { Log } from 'logr-kit';
 
 test('login flow', async ({ page }) => {
   Log.section('Login flow');
@@ -75,7 +75,7 @@ test('login flow', async ({ page }) => {
 ## Usage
 
 ```ts
-import { Log } from 'pw-log';
+import { Log } from 'logr-kit';
 
 Log.section('Cart tests');
 Log.info('Navigating to cart page');

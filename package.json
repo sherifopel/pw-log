@@ -1,7 +1,7 @@
 {
-  "name": "pw-log",
+  "name": "logr-kit",
   "version": "1.0.0",
-  "description": "Colourful Playwright test logger — structured console output with sections, diffs, tables and pass/fail checks",
+  "description": "Structured terminal logger for Node.js — colourful sections, diffs, tables, pass/fail checks and more",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -12,11 +12,15 @@
     "prepublishOnly": "npm run build"
   },
   "keywords": [
-    "playwright",
     "logger",
-    "test",
     "chalk",
-    "console"
+    "terminal",
+    "console",
+    "cli",
+    "log",
+    "structured",
+    "playwright",
+    "test"
   ],
   "author": "Sherif Opel",
   "license": "MIT",
